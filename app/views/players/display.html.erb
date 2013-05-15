@@ -76,7 +76,7 @@ Campus Recreation
 			<h3><%='Number: '+ @player.number.to_s %> <br>
 			<%='Grade: ' + @player.grade %> <br> <br>
 			
-			<%= h(@player.bio).gsub(/\n/, '<br>') %></h3>
+			<%= h(@player.bio).gsub(/\n/, '<br/>').html_safe %></h3>
 		</div>
 			
 	</div>
