@@ -6,6 +6,6 @@ class Dbmig < ActiveRecord::Migration
   def down
    # This might cause trouble if you have strings longer
    # than 255 characters.
-   change_column :players, :bio, :string
+   change_column :players, :bio, :text
    end
 end

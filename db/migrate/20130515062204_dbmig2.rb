@@ -1,4 +1,4 @@
-class Dbmig < ActiveRecord::Migration
+class Dbmig2 < ActiveRecord::Migration
   def up
    change_column :news, :body, :text
   end
