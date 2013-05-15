@@ -1,4 +1,5 @@
 class HomeController < ApplicationController
+  layout "front_facing", only: [:index, :contact, :newcomers, :parents, :merchandise, :history]
   def index
 	@topnews = News.last
 	@roster = Roster.all

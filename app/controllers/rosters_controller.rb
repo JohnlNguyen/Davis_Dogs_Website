@@ -86,7 +86,7 @@ class RostersController < ApplicationController
     @roster = Roster.find(params[:id])
 	@topnews = News.last
 	respond_to do |format|
-      format.html # display.html.erb
+      format.html {render layout: 'front'}# display.html.erb
       format.json { render json: @roster }
     end
   end

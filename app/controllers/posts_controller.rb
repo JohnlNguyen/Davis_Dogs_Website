@@ -101,7 +101,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
 
     respond_to do |format|
-      format.html # show.html.erb
+      format.html {render layout: 'front'} # show.html.erb
       format.json { render json: @post }
     end
   end
@@ -111,7 +111,7 @@ class PostsController < ApplicationController
     @post = Post.all(:order => "created_at DESC")
 
     respond_to do |format|
-      format.html # show.html.erb
+      format.html {render layout: 'front'}# show.html.erb
       format.json { render json: @post }
     end
   end

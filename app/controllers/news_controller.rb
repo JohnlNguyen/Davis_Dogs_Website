@@ -89,7 +89,7 @@ class NewsController < ApplicationController
 	@topnews = News.last
 	@roster = Roster.all;
 	respond_to do |format|
-      format.html # display.html.erb
+      format.html {render layout: 'front'}# display.html.erb
       format.json { render json: @news }
     end
   end
@@ -100,7 +100,7 @@ class NewsController < ApplicationController
 	@topnews = News.last
 	@roster = Roster.all;
 	respond_to do |format|
-      format.html # display_all.html.erb
+      format.html {render layout: 'front'}# display_all.html.erb
       format.json { render json: @news }
     end
   end
