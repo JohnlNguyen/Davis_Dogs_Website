@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130401233931) do
+ActiveRecord::Schema.define(:version => 20130515062203) do
 
   create_table "comments", :force => true do |t|
     t.string   "commenter"
@@ -34,11 +34,11 @@ ActiveRecord::Schema.define(:version => 20130401233931) do
   create_table "players", :force => true do |t|
     t.string   "name"
     t.string   "grade"
-    t.string   "bio"
+    t.text     "bio",        :limit => 255
     t.integer  "number"
     t.integer  "roster_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
   end
 
   add_index "players", ["roster_id"], :name => "index_players_on_roster_id"
