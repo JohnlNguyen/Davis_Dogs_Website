@@ -83,7 +83,7 @@ Campus Recreation
 			</p>
 
 			<p>
-			  <h3><%= @news.body %></h3>
+			  <h3><%= h(@news.body).gsub(/\n/, '<br/>') %></h3>
 			</p>
 
 
