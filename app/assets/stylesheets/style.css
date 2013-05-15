@@ -77,8 +77,8 @@ body {
 
 #navlist
 {
-	font: Helvetica,Arial,sans-serif
-	padding-bottom: 2px;
+	font: Helvetica,Arial,sans-serif;
+	padding: 2px;
 	font-size: 14px;
 	color: #0C1E4C;
 	font-weight: bold;
