@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130515062203) do
+ActiveRecord::Schema.define(:version => 20130515062204) do
 
   create_table "comments", :force => true do |t|
     t.string   "commenter"
@@ -26,9 +26,9 @@ ActiveRecord::Schema.define(:version => 20130515062203) do
   create_table "news", :force => true do |t|
     t.string   "title"
     t.string   "subtitle"
-    t.string   "body"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.text     "body",       :limit => 255
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
   end
 
   create_table "players", :force => true do |t|
