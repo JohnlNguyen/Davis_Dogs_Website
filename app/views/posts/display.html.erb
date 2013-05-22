@@ -89,7 +89,7 @@ Campus Recreation
 		 
 		  <p>
 			<b>Comment:</b>
-			<%= comment.body %>
+			<%= h(comment.body).gsub(/\n/, '<br/>').html_safe %>
 		  </p>
 		<% end %>
 		<br> <br>
