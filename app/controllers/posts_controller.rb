@@ -50,7 +50,7 @@ class PostsController < ApplicationController
   def create
 	@topnews = News.last
 	@roster = Roster.all
-    @post = Post.new(params[:post])
+    @post = Post.new(params[:post]) #add ensure title length > some amount to guarantee functionality of site
 
     respond_to do |format|
       if @post.save
