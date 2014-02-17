@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
-  http_basic_authenticate_with :name => "dogs", :password => "woofwoof", :except => [:display]
+  http_basic_authenticate_with :name => "dogs", :password => "woofwoof", :except => [:display, :display_all]
   def index
 	@topnews = News.last
 	@roster = Roster.all
