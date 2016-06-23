@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
   <title>Davis Dogs</title>
   <script async src="http://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
@@ -30,15 +31,24 @@
     </div>
   </nav>
 
-  <div id="index-banner" class="parallax-container">
-    <div class="section no-pad-bot">
-      <div class="container">
+  <div class="slider">
+     <ul class="slides">
+       <li>
+         <img src="slider1.jpg"> <!-- random image -->
+       </li>
+       <li>
+         <img src="slider3.jpg"> <!-- random image -->
+       </li>
+       <li>
+         <img src="slider2.jpg"> <!-- random image -->
+       </li>
+       <li>
+         <img src="slider4.jpg"> <!-- random image -->
+         </div>
+       </li>
 
-      </div>
-    </div>
-    <div class="parallax"><img src="background4.jpg" alt="Team Photo" width= "100" align="top"></div>
-  </div>
-
+     </ul>
+   </div>
 
   <div class="container">
     <div class="section"
@@ -90,7 +100,9 @@
     $(document).ready(function(){
       $('ul.tabs').tabs('select_tab', 'tab_id');
     });
-
+    $(document).ready(function(){
+      $('.slider').slider({full_width: true, height: 450,transition:500 , interval:3000  });
+    });
   </script>
 
   </body>
