@@ -12,10 +12,10 @@
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
-  <nav class="white" role="navigation">
+  <nav class="white navbar navbar-default navbar-inverse" role="navigation">
     <div class="nav-wrapper container">
       <ul class="left hide-on-med-and-down">
-        <li><a href="index.html">Home</a></li>
+        <li><a href="home.html">Home</a></li>
       </ul>
       <ul class="left hide-on-med-and-down">
         <li><a href="schedule.html">Schedule</a></li>
@@ -104,6 +104,13 @@
       $('.slider').slider({full_width: true, height: 450,transition:500 , interval:3000  });
     });
   </script>
-
+  <script>
+  $('.button-collapse').sideNav({
+     menuWidth: 300, // Default is 240
+     edge: 'right', // Choose the horizontal origin
+     closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+   }
+ );
+</script>
   </body>
 </html>
